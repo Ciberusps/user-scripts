@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Steam revenue calculator
-// @version     3
+// @version     4
 // @namespace   https://github.com/Ciberus/steam-scripts
 // @updateURL   https://github.com/Ciberusps/steam-scripts/raw/main/revenue-calculator/revenue-calculator.user.js
 // @downloadURL https://github.com/Ciberusps/steam-scripts/raw/main/revenue-calculator/revenue-calculator.user.js
@@ -46,8 +46,16 @@
     const isValidGamePath = parts.length === 3 && !Number.isNaN(gameId);
     if (!isValidGamePath) return null;
 
+    const packageIdStringSplitted = document
+      .querySelector("div.game_area_purchase_game")
+      .getAttribute("id")
+      .split("_");
+    const packageId = Number(
+      packageIdStringSplitted[packageIdStringSplitted.length - 1]
+    );
+
     const pricesRes = await request(
-      "https://store.steampowered.com/api/packagedetails/?cc=us&packageids=166562",
+      `https://store.steampowered.com/api/packagedetails/?cc=us&packageids=${packageId}`,
       {
         method: "GET",
       }
