@@ -1,8 +1,19 @@
 # Steam scripts
 
+Some [userscripts](https://en.wikipedia.org/wiki/Userscript) for steam
+
+## How to install
+
+- install tampermonkey for your browser - [google chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en), [other browsers](https://www.tampermonkey.net/?ext=dhdg&browser=chrome)
+- install necessary script via "Quick Install" section
+
 ## Revenue calculator
 
 Displays approximate game revenue using [Slava Gris formula](https://youtu.be/FvEBroOIKOE?t=1625)
+
+### Quick install
+
+https://github.com/Ciberusps/steam-scripts/raw/main/revenue-calculator/revenue-calculator.user.js
 
 ### Variables
 
