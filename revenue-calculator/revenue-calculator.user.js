@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Steam revenue calculator
-// @version     4
+// @version     5
 // @namespace   https://github.com/Ciberus/steam-scripts
 // @updateURL   https://github.com/Ciberusps/steam-scripts/raw/main/revenue-calculator/revenue-calculator.user.js
 // @downloadURL https://github.com/Ciberusps/steam-scripts/raw/main/revenue-calculator/revenue-calculator.user.js
@@ -46,8 +46,10 @@
     const isValidGamePath = parts.length === 3 && !Number.isNaN(gameId);
     if (!isValidGamePath) return null;
 
+    debug &&
+      console.log(document.querySelector("div.game_area_purchase_game[id]"));
     const packageIdStringSplitted = document
-      .querySelector("div.game_area_purchase_game")
+      .querySelector("div.game_area_purchase_game[id]")
       .getAttribute("id")
       .split("_");
     const packageId = Number(
