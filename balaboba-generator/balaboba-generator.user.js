@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name        Balaboba generator
 // @version     3
-// @namespace   https://github.com/Ciberus/steam-scripts
-// @updateURL   https://github.com/Ciberusps/steam-scripts/raw/main/balaboba-generator/balaboba-generator.user.js
-// @downloadURL https://github.com/Ciberusps/steam-scripts/raw/main/balaboba-generator/balaboba-generator.user.js
+// @namespace   https://github.com/Ciberus/user-scripts
+// @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/balaboba-generator/balaboba-generator.user.js
+// @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/balaboba-generator/balaboba-generator.user.js
 // @description Balaboba > ABOBA - генерирует тексты с помощью нейросети от Яндекса "Балабоба" https://yandex.ru/lab/yalm
 // @author      CiberusPS
 // @include     *://*.dtf.ru*
@@ -13,7 +13,7 @@
 // @include     *://*.vc.ru*
 // @include     *://vc.ru/*
 // @grant       none
-// @require     file://G:\steam-scripts\balaboba-generator\balaboba-generator.user.js
+// @require     file://G:\user-scripts\balaboba-generator\balaboba-generator.user.js
 // ==/UserScript==
 
 (function () {

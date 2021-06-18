@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name        Steam revenue calculator
 // @version     5
-// @namespace   https://github.com/Ciberus/steam-scripts
-// @updateURL   https://github.com/Ciberusps/steam-scripts/raw/main/revenue-calculator/revenue-calculator.user.js
-// @downloadURL https://github.com/Ciberusps/steam-scripts/raw/main/revenue-calculator/revenue-calculator.user.js
+// @namespace   https://github.com/Ciberus/user-scripts
+// @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/revenue-calculator/revenue-calculator.user.js
+// @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/revenue-calculator/revenue-calculator.user.js
 // @description Calculate approximate revenue of steam game via Slava Gris formula
 // @author      CiberusPS
 // @include     *://*store.steampowered.com/*
 // @grant       none
-// @require     file://G:\steam-scripts\revenue-calculator\revenue-calculator.user.js
+// @require     file://G:\user-scripts\revenue-calculator\revenue-calculator.user.js
 // ==/UserScript==
 
 (function () {

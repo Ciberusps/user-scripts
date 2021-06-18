@@ -1,6 +1,6 @@
-# Steam scripts
+# User scripts
 
-Some [userscripts](https://en.wikipedia.org/wiki/Userscript) for steam
+Some [userscripts](https://en.wikipedia.org/wiki/Userscript) for steam, dtf, vc, tj
 
 ## How to install
 
@@ -13,7 +13,7 @@ Displays approximate game revenue using [Slava Gris formula](https://youtu.be/Fv
 
 ### Quick install
 
-https://github.com/Ciberusps/steam-scripts/raw/main/revenue-calculator/revenue-calculator.user.js
+https://github.com/Ciberusps/user-scripts/raw/main/revenue-calculator/revenue-calculator.user.js
 
 ### Variables
 
