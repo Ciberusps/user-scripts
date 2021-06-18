@@ -13,7 +13,7 @@ Displays approximate game revenue using [Slava Gris formula](https://youtu.be/Fv
 
 ### Quick install
 
-https://github.com/Ciberusps/user-scripts/raw/main/revenue-calculator/revenue-calculator.user.js
+https://github.com/Ciberusps/user-scripts/raw/main/steam-revenue-calculator/steam-revenue-calculator.user.js
 
 ### Variables
 
@@ -32,4 +32,4 @@ Gross revenue = RN * 60 * AGC
 
 Net revenue(without taxes) = RN * 60 * AGC * WSC
 
-![View](revenue-calculator/screenshots/1.png)
+![View](steam-revenue-calculator/images/screenshot_1.png)
