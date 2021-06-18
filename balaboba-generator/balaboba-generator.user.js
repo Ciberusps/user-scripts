@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Balaboba generator
-// @version     2
+// @version     3
 // @namespace   https://github.com/Ciberus/steam-scripts
 // @updateURL   https://github.com/Ciberusps/steam-scripts/raw/main/balaboba-generator/balaboba-generator.user.js
 // @downloadURL https://github.com/Ciberusps/steam-scripts/raw/main/balaboba-generator/balaboba-generator.user.js
@@ -198,6 +198,12 @@
     styleSheet.type = "text/css";
     styleSheet.innerHTML = defaultStyles;
     document.head.appendChild(styleSheet);
+
+    const defaultCommentForms = document.querySelectorAll("div.comments_form");
+    console.log("fads", defaultCommentForms);
+    defaultCommentForms.forEach((el) => {
+      addUiElements({ target: el });
+    });
   };
 
   window.addEventListener("load", onLoaded);
