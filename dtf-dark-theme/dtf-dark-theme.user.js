@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     10
-// @namespace   https://github.com/Ciberus/user-scripts
+// @version     11
+// @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @description DTF Dark Theme
@@ -434,6 +434,16 @@
 
     .thesis__custom_button {
       color: ${theme.white} !important;
+    }
+
+    .comment--with-donate, .comment--pinned {
+      background: ${theme.darkerGrey} !important;
+    }
+    .comment__content::before {
+      background: ${theme.darkerGrey} !important;
+    }
+    .comment__branches::before {
+      background: ${theme.darkerGrey} !important;
     }
   `;
 
