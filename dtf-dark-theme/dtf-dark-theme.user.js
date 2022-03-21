@@ -445,6 +445,13 @@
     .comment__branches::before {
       background: ${theme.darkerGrey} !important;
     }
+
+    .comment__branch {
+      border-color: ${theme.lightGrey} !important;
+    }
+    .comment__branch:not(.comment__branch--max-level):last-child::before {
+      border-color: ${theme.lightGrey} !important;
+    }
   `;
 
   const onLoaded = async () => {
