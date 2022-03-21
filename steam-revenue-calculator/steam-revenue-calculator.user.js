@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Steam revenue calculator
-// @version     5
+// @version     6
 // @namespace   https://github.com/Ciberus/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/steam-revenue-calculator/steam-revenue-calculator.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/steam-revenue-calculator/steam-revenue-calculator.user.js
@@ -8,7 +8,7 @@
 // @author      CiberusPS
 // @include     *://*store.steampowered.com/*
 // @grant       none
-// @require     file://G:\user-scripts\steam-revenue-calculator\steam-revenue-calculator.user.js
+// @require     file://F:\user-scripts\steam-revenue-calculator\steam-revenue-calculator.user.js
 // ==/UserScript==
 
 (function () {

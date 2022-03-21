@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Balaboba generator
-// @version     3
+// @version     4
 // @namespace   https://github.com/Ciberus/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-balaboba-generator/dtf-balaboba-generator.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-balaboba-generator/dtf-balaboba-generator.user.js
@@ -13,7 +13,7 @@
 // @include     *://*.vc.ru*
 // @include     *://vc.ru/*
 // @grant       none
-// @require     file://G:\user-scripts\dtf-balaboba-generator\dtf-balaboba-generator.user.js
+// @require     file://F:\user-scripts\dtf-balaboba-generator\dtf-balaboba-generator.user.js
 // ==/UserScript==
 
 (function () {
