@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     12
+// @version     13
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -104,6 +104,14 @@
       color: ${theme.grey} !important;
     }
 
+    .search__field {
+      background: ${theme.darkGrey} !important;
+    }
+
+    .search__field .v-field__wrapper {
+      background: ${theme.darkGrey} !important;
+    }
+
     .search__field > .icon--search {
       color: ${theme.grey} !important;
     }
@@ -175,8 +183,9 @@
       ${theme.blackWhiter} 40%) !important;
     }
     .v-button, .thesis__submit .v-button, .v-button--blue {
-      background: ${theme.grey} !important;
+      background: ${theme.darkGrey} !important;
       color: ${theme.white} !important;
+      box-shadow: 0.5px 1px 5px 0 ${theme.blue + "AA"} !important;
     }
     
     .v-tabs-navigation {
@@ -458,27 +467,24 @@
     }
   `;
 
-  const onLoaded = async () => {
-    const styleSheet = document.createElement("style");
-    styleSheet.type = "text/css";
-    styleSheet.innerHTML = defaultStyles;
-    document.head.appendChild(styleSheet);
+  const stylesheetElement = document.createElement("style");
+  stylesheetElement.setAttribute("myid", "custom-style");
+  stylesheetElement.innerHTML = defaultStyles;
 
-    const root = document.documentElement;
-    const test = "#0d7bcd";
-    root.style.setProperty("--color-text-main", test);
-    root.style.setProperty("--color-text-gray", test);
-    root.style.setProperty("--color-text-blue-hover", test);
-    root.style.setProperty("--color-line-gray", test);
-    root.style.setProperty("--color-text-negative", test);
-    root.style.setProperty("--color-bg-gray", test);
-    root.style.setProperty("--color-text-gray", test);
-    root.style.setProperty("--color-text-gray", test);
-    root.style.setProperty("--color-background", test);
-    root.style.setProperty("--color-text", test);
+  const interval = setInterval(() => {
+    if (stylesheetElement.parentNode === document.head) {
+      document.head.removeChild(stylesheetElement);
+    }
+    document.head.appendChild(stylesheetElement);
+  }, 500);
 
-    console.log("WORKES");
-  };
+  // insurance that interval will be stopped sometime
+  setTimeout(() => {
+    clearInterval(interval);
+  }, 15000);
 
-  onLoaded();
+  window.addEventListener("load", () => {
+    console.log("DOMContentLoaded");
+    clearInterval(interval);
+  });
 })();
