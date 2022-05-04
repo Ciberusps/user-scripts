@@ -1,20 +1,17 @@
 // ==UserScript==
 // @name        Steam spy
-// @version     3
+// @version     5
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/steam-spy/steam-spy.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/steam-spy/steam-spy.user.js
 // @description Dispaly owners count from steamspy.com
 // @author      CiberusPS
-// @include     *://*store.steampowered.com/*
+// @match       *://*store.steampowered.com/*
 // @grant       GM.xmlHttpRequest
-// @connect     *
+// @connect     *://*steamspy.com/*
 // @require     file://F:\user-scripts\steam-spy\steam-spy.user.js
 // ==/UserScript==
 
-const AVG_PRICE_MODIFIER = 0.75;
-const STEAM_CUT = 0.3;
-const debug = true;
 
 function getPrice(data) {
   try {
@@ -36,27 +33,11 @@ async function onLoaded() {
   const isValidGamePath = parts.length === 3 && !Number.isNaN(gameId);
   if (!isValidGamePath) return null;
 
-  // container classname glance_ctn
-  // https://steamspy.com/api.php?request=appdetails&appid=730
-  // const response = await request(
-  //   `https://steamspy.com/api.php?request=appdetails&appid=${gameId}`,
-  //   {
-  //     method: "GET",
-  //     // mode: "cors",
-  //     headers: {
-  //       'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 11_0 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) Version/11.0 Mobile/15A5341f Safari/604.1'
-  //     }
-  //   }
-  // );
-  // const res2 = await window.fetch(`https://steamspy.com/api.php?request=appdetails&appid=${gameId}`);
+  
   const res2 = await GM.xmlHttpRequest({ method: "GET", url: `https://steamspy.com/api.php?request=appdetails&appid=${gameId}` });
   
-  // const response = GM_xmlhttpRequest({
-  //   method: "GET",
-  //   url: `https://steamspy.com/api.php?request=appdetails&appid=${gameId}`,
-  // })
   debug && console.log({ response: res2  });
-  const json = await response.json();
+  const json = await res2.json();
   console.log({ json })
   if (!pricesRes) return null;
 
