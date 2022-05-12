@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Steam spy
-// @version     8
+// @version     9
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/steam-spy/steam-spy.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/steam-spy/steam-spy.user.js
