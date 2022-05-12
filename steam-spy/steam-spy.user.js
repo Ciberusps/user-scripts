@@ -26,8 +26,8 @@
 
   async function request(options) {
     try {
-      const res2 = await GM.xmlHttpRequest(options);
-      return res2.json();
+      const response = await GM.xmlHttpRequest(options);
+      return JSON.parse(response.responseText);
     } catch (err) {
       console.error(err);
     }
@@ -44,12 +44,12 @@
     const isValidGamePath = parts.length === 3 && !Number.isNaN(gameId);
     if (!isValidGamePath) return null;
 
-    const res = await request({
+    const steamSpyData = await request({
       method: "GET",
       url: `https://steamspy.com/api.php?request=appdetails&appid=${gameId}`,
     });
 
-    debug && console.log({ response: res });
+    debug && console.log(steamSpyData);
     // console.log({ response2: res2.response    });
     // const json = await res2.json();
     // console.log({ json })
