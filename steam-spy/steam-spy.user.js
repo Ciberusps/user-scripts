@@ -34,7 +34,10 @@
   }
 
   async function onLoaded() {
-    console.log("KOJPOIJPOJPNOIJ");
+    console.log("KOJPOIJPOJPNOIJ 322");
+    if (window.__STEAM_SPY_LOADED) return;
+    window.__STEAM_SPY_LOADED = true;
+
     debug && console.log("LOADED EVENT v7", window.location.href);
     const pathname = window.location.pathname;
     const parts = pathname.split("/").filter((s) => s.length > 0);
