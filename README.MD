@@ -9,8 +9,8 @@ Some [userscripts](https://en.wikipedia.org/wiki/Userscript) for steam, dtf, vc,
 
 ## Scripts
 
-- dtf-dark-theme - [install link](dtf-dark-theme/dtf-dark-theme.user.js)
-- steam-spy - [install link](steam-spy/steam-spy.user.js)
+- dtf-dark-theme - [install link](https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js)
+- steam-spy - [install link](https://github.com/Ciberusps/user-scripts/raw/main/steam-spy/steam-spy.user.js)
 
 ## Development
 
