@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Steam spy
-// @version     9
+// @version     10
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/steam-spy/steam-spy.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/steam-spy/steam-spy.user.js
@@ -34,10 +34,6 @@
   }
 
   async function onLoaded() {
-    console.log("KOJPOIJPOJPNOIJ 322");
-    if (window.__STEAM_SPY_LOADED) return;
-    window.__STEAM_SPY_LOADED = true;
-
     debug && console.log("LOADED EVENT v7", window.location.href);
     const pathname = window.location.pathname;
     const parts = pathname.split("/").filter((s) => s.length > 0);
@@ -99,5 +95,8 @@
     debug && console.log("INJECTED");
   }
 
-  window.addEventListener("load", onLoaded);
+  if (!window.__STEAM_SPY_LOADED) {
+    window.__STEAM_SPY_LOADED = true;
+    window.addEventListener("load", onLoaded);
+  }
 })();

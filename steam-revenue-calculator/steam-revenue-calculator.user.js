@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Steam revenue calculator
-// @version     6
+// @version     7
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/steam-revenue-calculator/steam-revenue-calculator.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/steam-revenue-calculator/steam-revenue-calculator.user.js
@@ -46,15 +46,12 @@
     const isValidGamePath = parts.length === 3 && !Number.isNaN(gameId);
     if (!isValidGamePath) return null;
 
-    debug &&
-      console.log(document.querySelector("div.game_area_purchase_game[id]"));
+    debug && console.log(document.querySelector("div.game_area_purchase_game[id]"));
     const packageIdStringSplitted = document
       .querySelector("div.game_area_purchase_game[id]")
       .getAttribute("id")
       .split("_");
-    const packageId = Number(
-      packageIdStringSplitted[packageIdStringSplitted.length - 1]
-    );
+    const packageId = Number(packageIdStringSplitted[packageIdStringSplitted.length - 1]);
 
     const pricesRes = await request(
       `https://store.steampowered.com/api/packagedetails/?cc=us&packageids=${packageId}`,
@@ -70,9 +67,7 @@
     debug && console.log("PRICE", price);
 
     const reviewsCount = Number(
-      document
-        .querySelector('meta[itemprop="reviewCount"]')
-        .getAttribute("content")
+      document.querySelector('meta[itemprop="reviewCount"]').getAttribute("content")
     );
     debug && console.log("REVIEW COUNT", reviewsCount);
 
@@ -107,5 +102,8 @@
     debug && console.log("INJECTED");
   }
 
-  window.addEventListener("load", onLoaded);
+  if (!window.__STEAM_REVENUE_CALC_LOADED) {
+    window.__STEAM_REVENUE_CALC_LOADED = true;
+    window.addEventListener("load", onLoaded);
+  }
 })();
