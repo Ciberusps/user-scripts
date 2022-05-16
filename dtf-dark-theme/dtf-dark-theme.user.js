@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     14
+// @version     15
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -256,9 +256,7 @@
       background: ${theme.grey} !important;
     }
     .vote .vote__users--overflowed .vote__users__content_wrapper:after {
-      background-image: linear-gradient(45deg, ${
-        theme.blackWhiter
-      }, transparent);
+      background-image: linear-gradient(45deg, ${theme.blackWhiter}, transparent);
     }
 
     .ui-button {
@@ -468,23 +466,31 @@
   `;
 
   const stylesheetElement = document.createElement("style");
-  stylesheetElement.setAttribute("myid", "custom-style");
+  stylesheetElement.id = "my-dtf-styles";
   stylesheetElement.innerHTML = defaultStyles;
 
-  const interval = setInterval(() => {
-    if (stylesheetElement.parentNode === document.head) {
-      document.head.removeChild(stylesheetElement);
+  function appendStyles() {
+    if (stylesheetElement !== document.head.lastElementChild) {
+      if (stylesheetElement.parentNode === document.head) {
+        document.head.removeChild(stylesheetElement);
+      }
+      document.head.appendChild(stylesheetElement);
     }
-    document.head.appendChild(stylesheetElement);
+  }
+
+  const interval = setInterval(() => {
+    appendStyles();
   }, 500);
 
   // insurance that interval will be stopped sometime
   setTimeout(() => {
     clearInterval(interval);
+    console.log("Interval ended");
   }, 15000);
 
   window.addEventListener("load", () => {
     console.log("DOMContentLoaded");
+    appendStyles();
     clearInterval(interval);
   });
 })();
