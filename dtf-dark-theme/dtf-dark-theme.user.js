@@ -464,7 +464,7 @@
       background-color: ${theme.lightGrey} !important;
     }
 
-    .comment-form.comment-form--replying {
+    .comment-form {
       background-color: ${theme.darkerGrey} !important;
     }
   `;
