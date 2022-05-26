@@ -471,6 +471,12 @@
     .v-field__wrapper {
       background: ${theme.darkerGrey} !important;
     }
+    .v-list-tab--active {
+      background: ${theme.darkerGrey} !important;
+    }
+    .v-list-tab:hover {
+      background: ${theme.grey} !important;
+    }
   `;
 
   const stylesheetElement = document.createElement("style");
