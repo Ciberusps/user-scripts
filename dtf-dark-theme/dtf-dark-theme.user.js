@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     16
+// @version     17
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -466,6 +466,10 @@
 
     .comment-form {
       background-color: ${theme.darkerGrey} !important;
+    }
+
+    .v-field__wrapper {
+      background: ${theme.darkerGrey} !important;
     }
   `;
 
