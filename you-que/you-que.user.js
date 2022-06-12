@@ -32,24 +32,26 @@
   function createSidebarEl() {
     sidebarEl = document.createElement("div");
     // sidebarEl.id = "you-que-sidebar";
-    sidebarEl.style.display = "flex";
-    sidebarEl.style.flexDirection = "column";
-    sidebarEl.style.alignItems = "center";
-    sidebarEl.style.width = "400px";
-    sidebarEl.style.color = "white";
-    sidebarEl.style.fontSize = "16px";
-    sidebarEl.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
+    sidebarEl.className = "style-scope ytd-playlist-video-list-renderer";
+    // sidebarEl.style.display = "flex";
+    // sidebarEl.style.flexDirection = "column";
+    // sidebarEl.style.alignItems = "center";
+    // sidebarEl.style.width = "400px";
+    // sidebarEl.style.color = "white";
+    // sidebarEl.style.fontSize = "16px";
+    // sidebarEl.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
 
     for (let i = 0; i < 10; i++) {
-      const testVideo = document.createElement("div");
-      testVideo.style.display = "flex";
-      // testVideo.style.flexDirection = "column";
-      testVideo.style.alignItems = "center";
-      testVideo.style.width = "100%";
-      testVideo.style.height = "50px";
-      testVideo.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
-      testVideo.style.marginBottom = "5px";
-      testVideo.textContent = "Video " + i;
+      const testVideo = document.createElement("ytd-playlist-video-renderer");
+      testVideo.className = "style-scope ytd-playlist-video-list-renderer";
+      // testVideo.style.display = "flex";
+      // // testVideo.style.flexDirection = "column";
+      // testVideo.style.alignItems = "center";
+      // testVideo.style.width = "100%";
+      // testVideo.style.height = "50px";
+      // testVideo.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+      // testVideo.style.marginBottom = "5px";
+      // testVideo.textContent = "Video " + i;
       sidebarEl.appendChild(testVideo);
     }
   }
