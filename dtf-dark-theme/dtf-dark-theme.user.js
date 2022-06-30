@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     17
+// @version     18
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -476,6 +476,18 @@
     }
     .v-list-tab:hover {
       background: ${theme.grey} !important;
+    }
+
+    .account-menu-root {
+      color: white;
+      background: ${theme.darkerGrey} !important;
+    }
+    .user-card__text, .account-menu__item {
+      color: white !important;
+    }
+    .account-menu__item-wrapper:hover, .account-menu__user-card:hover {
+      background: ${theme.grey} !important;
+      border-radius: 8px;
     }
   `;
 
