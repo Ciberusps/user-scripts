@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     19
+// @version     20
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -192,7 +192,7 @@
       background: ${theme.darkerGrey} !important;
     }
 
-    .andropov_link {
+    .andropov_link, html body .ce-redactor a.andropov_link {
       background: ${theme.darkerGrey} !important;
       border: ${theme.darkerGrey} !important;
       color: ${theme.white} !important;
@@ -516,6 +516,9 @@
     }
     .ce-block-settings__item--active {
       background: ${theme.grey} !important;
+    }
+    .ui-limited-input ui-limited-input--big {
+      color: ${theme.grey} !important;
     }
     /** EDITOR END */
   `;
