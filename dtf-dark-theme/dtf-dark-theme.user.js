@@ -489,6 +489,35 @@
       background: ${theme.grey} !important;
       border-radius: 8px;
     }
+
+    .popover {
+      background: ${theme.darkerGrey} !important;
+      color: ${theme.white} !important;
+    }
+
+    /** EDITOR START */
+    .writing__authors, .writing__footer, .writing-footer, .v-popup-window__content, .v-mobile-menu__header,
+    .anchor-tool__input {
+      background: ${theme.darkerGrey} !important;
+      color: ${theme.white} !important;
+    }
+
+    .writing__authors {
+      --offset-top: 0;
+    }
+    .cdx-icon {
+      filter: invert(1);
+    }
+    .ce-popover svg {
+      filter: invert(1);
+    }
+    .ce-popover .ce-block-settings__item--active svg {
+      filter: invert(0);
+    }
+    .ce-block-settings__item--active {
+      background: ${theme.grey} !important;
+    }
+    /** EDITOR END */
   `;
 
   const stylesheetElement = document.createElement("style");
