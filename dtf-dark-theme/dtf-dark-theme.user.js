@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     20
+// @version     21
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -148,7 +148,8 @@
     }
 
     #v_gear, #ui_plus, #ui_sidebar_messenger {
-      fill: ${theme.white};
+      filter: invert(1);
+      /* fill: ${theme.white}; */
     }
 
     .head-notifies__panel {
@@ -174,6 +175,12 @@
       background: ${theme.darkGrey} !important;
     }
     
+    .v-tab {
+      color: ${theme.grey} !important;
+    }
+    .v-tab--active {
+      color: ${theme.white} !important;
+    }
     .v-tabs--overflown::after {
       background: linear-gradient(90deg, ${theme.blackWhiter + "00"}  0%, 
       ${theme.blackWhiter} 40%) !important;
@@ -261,6 +268,7 @@
 
     .ui-button {
       background: ${theme.darkerGrey} !important;
+      color: ${theme.white} !important;
     }
     .thesis__submit.ui-button.ui-button--1 {
       background: ${theme.blue} !important;
@@ -477,6 +485,12 @@
     .v-list-tab:hover {
       background: ${theme.grey} !important;
     }
+    .v-list-tab__icon {
+      filter: invert(1);
+    }
+    .v-list-tab__comment {
+      color: ${theme.white} !important;
+    }
 
     .account-menu-root {
       color: white;
@@ -494,10 +508,27 @@
       background: ${theme.darkerGrey} !important;
       color: ${theme.white} !important;
     }
+    .popover-item:hover {
+      background: ${theme.grey} !important;
+    }
+    .ui_modal_window {
+      background: ${theme.darkerGrey} !important;
+      color: ${theme.white} !important;
+    }
+    .ui_modal_window__content, .ui_modal_window__title {
+      color: ${theme.white} !important;
+    }
+    .ui_modal_window__footer {
+      border-color: ${theme.lightGrey} !important;
+    }
+    
+    .settings-header.user-settings__header {
+      color: ${theme.white} !important;
+    }
 
     /** EDITOR START */
     .writing__authors, .writing__footer, .writing-footer, .v-popup-window__content, .v-mobile-menu__header,
-    .anchor-tool__input {
+    .anchor-tool__input, .editor-cp-tab__content {
       background: ${theme.darkerGrey} !important;
       color: ${theme.white} !important;
     }
@@ -514,11 +545,27 @@
     .ce-popover .ce-block-settings__item--active svg {
       filter: invert(0);
     }
-    .ce-block-settings__item--active {
+    .ce-block-settings__item:hover, .cdx-plugin-settings__item:hover, .ce-block-settings__item--active {
       background: ${theme.grey} !important;
     }
     .ui-limited-input ui-limited-input--big {
       color: ${theme.grey} !important;
+    }
+    .ce-toolbox__item:hover {
+      background: ${theme.grey} !important;
+    }
+    .ce-toolbox__item-icon {
+      filter: invert(1);
+    }
+    .ce-toolbox-search {
+      background: ${theme.blackWhiter} !important;
+      color: ${theme.white};
+    }
+    input.ce-toolbox-search-input::placeholder {
+      color: ${theme.grey} !important;
+    }
+    .ce-toolbox__not-found {
+      color: ${theme.white} !important;
     }
     /** EDITOR END */
   `;
