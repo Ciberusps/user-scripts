@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     21
+// @version     22
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -565,6 +565,10 @@
       color: ${theme.grey} !important;
     }
     .ce-toolbox__not-found {
+      color: ${theme.white} !important;
+    }
+    .cdx-input {
+      background: ${theme.darkerGrey} !important;
       color: ${theme.white} !important;
     }
     /** EDITOR END */
