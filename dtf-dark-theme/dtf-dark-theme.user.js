@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     22
+// @version     24
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -106,6 +106,9 @@
 
     .search__field {
       background: ${theme.darkGrey} !important;
+    }
+    .v-text-input__input::placeholder {
+      color: ${theme.white} !important;
     }
 
     .search__field .v-field__wrapper {
@@ -568,6 +571,10 @@
       color: ${theme.white} !important;
     }
     .cdx-input {
+      background: ${theme.darkerGrey} !important;
+      color: ${theme.white} !important;
+    }
+    .quiz-tool-input {
       background: ${theme.darkerGrey} !important;
       color: ${theme.white} !important;
     }
