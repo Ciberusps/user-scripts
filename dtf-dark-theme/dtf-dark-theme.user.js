@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     24
+// @version     25
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -341,8 +341,14 @@
       text-decoration: underline;
     }
 
+    .notifications .notifications__header {
+      border-color: ${theme.black} !important;
+    }
     .notifications-header::after {
       background-color: ${theme.lightGrey} !important;
+    }
+    .notifications .notifications__footer {
+      border-color: ${theme.black} !important;
     }
 
     .editor__authors {
