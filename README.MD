@@ -16,4 +16,4 @@ Some [userscripts](https://en.wikipedia.org/wiki/Userscript) for steam, dtf, vc,
 
 ## Development
 
-- In chrome go to `chrome://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo` its tampermonkey extension and allow open local files by link
+- In chrome go to tampermonkey extension `chrome://extensions/?id=dhdgffkkebhmkfjojejmpbldmpobfkfo` and allow open local files by link
