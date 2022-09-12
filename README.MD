@@ -9,10 +9,10 @@ Some [userscripts](https://en.wikipedia.org/wiki/Userscript) for steam, dtf, vc,
 
 ## Scripts
 
-- dtf-dark-theme - [install link](https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js)
-- dtf-balaboba-generator - [install link](https://github.com/Ciberusps/user-scripts/raw/main/dtf-balaboba-generator/dtf-balaboba-generator.user.js)
-- steam-spy - [install link](https://github.com/Ciberusps/user-scripts/raw/main/steam-spy/steam-spy.user.js)
-- steam-revenue-calculator - [install link](https://github.com/Ciberusps/user-scripts/raw/main/steam-revenue-calculator/steam-revenue-calculator.user.js)
+- dtf-dark-theme - [install](https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js)
+- dtf-balaboba-generator - [install](https://github.com/Ciberusps/user-scripts/raw/main/dtf-balaboba-generator/dtf-balaboba-generator.user.js)
+- steam-spy - [install](https://github.com/Ciberusps/user-scripts/raw/main/steam-spy/steam-spy.user.js)
+- steam-revenue-calculator - [install](https://github.com/Ciberusps/user-scripts/raw/main/steam-revenue-calculator/steam-revenue-calculator.user.js)
 
 ## Development
 
