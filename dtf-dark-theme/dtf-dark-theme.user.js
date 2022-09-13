@@ -585,6 +585,35 @@
       color: ${theme.white} !important;
     }
     /** EDITOR END */
+
+    .messenger-panel__down {
+      background: ${theme.darkerGrey} !important;
+      color: ${theme.white} !important;
+    }
+    .messenger-panel__down-head {
+      border-bottom-color: ${theme.grey} !important;
+    }
+    .messenger-panel__down-footer, .channel-item__info {
+      border-top-color: ${theme.grey} !important;
+    }
+
+    /** messenger https://dtf.ru/m **/
+    .aside__header input[type="text"] {
+      background: ${theme.darkerGrey} !important;
+    }
+
+    /** compact chat */
+    .m-floating {
+      background: ${theme.darkerGrey} !important;
+      color: ${theme.white} !important;
+    }
+    .m-floating__header:hover {
+      background: ${theme.grey} !important;
+    }
+    .chat-messages__day span {
+      background: ${theme.grey} !important;
+      color: ${theme.white} !important;
+    }
   `;
 
   const stylesheetElement = document.createElement("style");
