@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     26
+// @version     28
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -52,7 +52,7 @@
 
   const defaultStyles = `
     html, body {
-      background: ${theme.black};
+      background: ${theme.black} !important;
       color: ${theme.white};
     }
 
@@ -613,6 +613,21 @@
     .chat-messages__day span {
       background: ${theme.grey} !important;
       color: ${theme.white} !important;
+    }
+
+    .block-warning {
+      background: ${theme.darkerGrey};
+      border: 1px solid #fbff0066;
+      border-radius: 8px;
+    }
+    .block-hidden {
+      background-color: ${theme.darkerGrey};
+    }
+    .block-hidden-wrapper::before {
+      background-color: transparent !important;
+    }
+    .page > * {
+      background: transparent !important;
     }
   `;
 
