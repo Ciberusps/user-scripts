@@ -629,6 +629,10 @@
     .page > * {
       background: transparent !important;
     }
+
+    .vacancies-bot {
+      background-color: ${theme.darkerGrey};
+    }
   `;
 
   const stylesheetElement = document.createElement("style");
