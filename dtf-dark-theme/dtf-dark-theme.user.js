@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     29
+// @version     32
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -626,9 +626,6 @@
     .block-hidden-wrapper::before {
       background-color: transparent !important;
     }
-    .page > * {
-      background: transparent !important;
-    }
 
     .vacancies-bot {
       background-color: ${theme.darkerGrey};
@@ -636,6 +633,16 @@
 
     .block-number {
       background: ${theme.darkerGrey};
+    }
+
+    .dstr-fl__outer {
+      background-color: ${theme.darkerGrey};
+    }
+    .dstr-bn {
+      background-color: ${theme.darkerGrey};
+    }
+    .dstr-fl, .ui-button {
+      background: ${theme.grey} !important;
     }
   `;
 
@@ -662,7 +669,7 @@
     console.log("Interval ended");
   }, 15000);
 
-  window.addEventListener("load", () => {
+  window.addEventListener("DOMContentLoaded", () => {
     console.log("DOMContentLoaded");
     appendStyles();
     clearInterval(interval);
