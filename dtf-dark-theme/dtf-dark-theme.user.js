@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     28
+// @version     29
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -632,6 +632,10 @@
 
     .vacancies-bot {
       background-color: ${theme.darkerGrey};
+    }
+
+    .block-number {
+      background: ${theme.darkerGrey};
     }
   `;
 
