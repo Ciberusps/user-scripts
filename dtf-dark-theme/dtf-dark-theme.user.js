@@ -644,6 +644,24 @@
     .dstr-fl, .ui-button {
       background: ${theme.grey} !important;
     }
+
+    .lbs-sheet, .lbs-sheet__content {
+      background: ${theme.darkerGrey};
+    }
+
+    .sheet-benefits {
+      background: ${theme.darkerGrey};
+    }
+    .plus-sheet {
+      background: linear-gradient(219.57deg, #deebff11 12.97%, #f7f1ff11 34.26%, #e0e3ff11 55.44%, #f0edff11 86.69%);
+    }
+    .plus-sheet__gradient {
+      background: linear-gradient(180deg, rgba(234,232,252,0) 0%, #eae8fc11 27.25%)
+    }
+
+    .andropov_link__title, .andropov_link__description {
+      color: ${theme.white};
+    }
   `;
 
   const stylesheetElement = document.createElement("style");
