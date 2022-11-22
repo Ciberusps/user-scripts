@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     32
+// @version     33
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -207,7 +207,7 @@
       border: ${theme.darkerGrey} !important;
       color: ${theme.white} !important;
     }
-    .andropov_tweet {
+    .andropov_tweet, .andropov_telegram {
       background: ${theme.darkerGrey} !important;
       border: ${theme.darkerGrey} !important;
       color: ${theme.white} !important;
@@ -661,6 +661,18 @@
 
     .andropov_link__title, .andropov_link__description {
       color: ${theme.white};
+    }
+
+    .search__field .v-field__wrapper .v-text-input__input {
+      color: ${theme.white} !important;
+    }
+
+    .floating_screen_film__header {
+      background: ${theme.darkerGrey};
+    }
+
+    .floating_screen_film--fixed {
+      border: 1px solid #222222;
     }
   `;
 
