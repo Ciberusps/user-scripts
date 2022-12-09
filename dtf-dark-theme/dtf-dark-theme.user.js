@@ -697,6 +697,12 @@
 	.audio_player__control__slider__bar {
 		background-color: ${theme.blue};
 	}
+	.floating_player {
+		background: ${theme.darkerGrey};
+	}
+	.audio_player__control__panel > .audio_player__control__slider {
+		background: ${theme.grey} !important;
+	}
   `;
 
   const stylesheetElement = document.createElement("style");
