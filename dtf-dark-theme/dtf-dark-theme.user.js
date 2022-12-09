@@ -684,6 +684,19 @@
       margin-top: 35px;
       border-top-color: ${theme.darkGrey} !important;
     }
+
+	.block-audio {
+		border: 1px solid ${theme.grey};
+	}
+	.block-audio__wrapper {
+      background: ${theme.darkerGrey};
+	}
+	.audio_player__control__rwd, .audio_player__control__fwd, .audio_player__control__play, .audio_player__control__pause, .audio_player__control__rate, .audio_player__control__mute {
+	  color: ${theme.white} !important;
+	}
+	.audio_player__control__slider__bar {
+		background-color: ${theme.blue};
+	}
   `;
 
   const stylesheetElement = document.createElement("style");
