@@ -21,14 +21,24 @@ const debug = false;
     addToWishlistButton.innerText = "Add to UnrealSales.io wishlist";
     addToWishlistButton.style.display = "flex";
     addToWishlistButton.style.alignItems = "center";
-    addToWishlistButton.style.background = "#6678FA";
+    addToWishlistButton.style.background = "#007bff";
     addToWishlistButton.style.borderRadius = "4px";
-    addToWishlistButton.style.width = "100%";
     addToWishlistButton.style.padding = "10px 15px";
-    addToWishlistButton.style.marginTop = "10px";
     addToWishlistButton.style.cursor = "pointer";
-    addToWishlistButton.style.fontWeight = "700";
     addToWishlistButton.style.fontSize = "1.1rem";
+
+    const linkToUnrealSales = document.createElement("a");
+    linkToUnrealSales.href = "https://www.unrealsales.io/tracker/";
+    linkToUnrealSales.target = "_blank";
+    linkToUnrealSales.innerText = "🌐";
+    linkToUnrealSales.style.display = "flex";
+    linkToUnrealSales.style.alignItems = "center";
+    linkToUnrealSales.style.background = "#007bff";
+    linkToUnrealSales.style.borderRadius = "4px";
+    linkToUnrealSales.style.marginLeft = "10px";
+    linkToUnrealSales.style.padding = "10px 15px";
+    linkToUnrealSales.style.cursor = "pointer";
+    linkToUnrealSales.style.fontSize = "1.1rem";
 
     addToWishlistButton.onclick = () =>
       (function () {
@@ -37,10 +47,19 @@ const debug = false;
         location.href = f;
       })();
 
+    const buttonsContainer = document.createElement("div");
+    buttonsContainer.style.display = "flex";
+    buttonsContainer.style.alignItems = "center";
+    buttonsContainer.style.flexWrap = "wrap";
+    buttonsContainer.style.marginTop = "20px";
+
+    buttonsContainer.appendChild(addToWishlistButton);
+    buttonsContainer.appendChild(linkToUnrealSales);
+
     const rootEl = document.querySelector(
       ".asset-details-container .asset-details__content"
     );
-    rootEl.appendChild(addToWishlistButton);
+    rootEl.appendChild(buttonsContainer);
 
     debug && console.log("INJECTED");
   }
