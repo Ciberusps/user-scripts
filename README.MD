@@ -13,6 +13,7 @@ Some [userscripts](https://en.wikipedia.org/wiki/Userscript) for steam, dtf, vc,
 - dtf-balaboba-generator - [install](https://github.com/Ciberusps/user-scripts/raw/main/dtf-balaboba-generator/dtf-balaboba-generator.user.js)
 - steam-spy - [install](https://github.com/Ciberusps/user-scripts/raw/main/steam-spy/steam-spy.user.js)
 - steam-revenue-calculator - [install](https://github.com/Ciberusps/user-scripts/raw/main/steam-revenue-calculator/steam-revenue-calculator.user.js)
+- UnrealSales - Add to wishlist button - [install](https://github.com/Ciberusps/user-scripts/raw/main/unrealsales-add-to-wishlist/unrealsales-add-to-wishlist.user.js)
 
 ## Development
 
