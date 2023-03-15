@@ -11,99 +11,39 @@
 // @require     file://F:\user-scripts\unrealsales-add-to-wishlist\unrealsales-add-to-wishlist.user.js
 // ==/UserScript==
 
+const debug = false;
+
 (function () {
-  const AVG_PRICE_MODIFIER = 0.75;
-  const STEAM_CUT = 0.3;
-  const debug = false;
-
-  async function request(url, init) {
-    try {
-      const response = await fetch(url, init);
-      const data = await response.json();
-      return data;
-    } catch (err) {
-      console.error("Failed to fetch price");
-      return null;
-    }
-  }
-
-  function getPrice(data) {
-    try {
-      const firstKey = Object.keys(data)[0];
-      return (data[firstKey].data.price.initial / 100) * AVG_PRICE_MODIFIER;
-    } catch (err) {
-      return null;
-    }
-  }
-
   async function onLoaded() {
     debug && console.log("LOADED EVENT", window.location.href);
-    // const pathname = window.location.pathname;
-    // const parts = pathname.split("/").filter((s) => s.length > 0);
-    // const gameId = Number(parts[1]);
-    // debug && console.log(parts, parts.length);
 
-    // const isValidGamePath = parts.length === 3 && !Number.isNaN(gameId);
-    // if (!isValidGamePath) return null;
+    const addToWishlistButton = document.createElement("div");
+    addToWishlistButton.innerText = "Add to UnrealSales.io wishlist";
+    addToWishlistButton.style.display = "flex";
+    addToWishlistButton.style.alignItems = "center";
+    addToWishlistButton.style.background = "#6678FA";
+    addToWishlistButton.style.borderRadius = "4px";
+    addToWishlistButton.style.width = "100%";
+    addToWishlistButton.style.padding = "10px 15px";
+    addToWishlistButton.style.marginTop = "10px";
+    addToWishlistButton.style.cursor = "pointer";
+    addToWishlistButton.style.fontWeight = "700";
+    addToWishlistButton.style.fontSize = "1.1rem";
 
-    // debug && console.log(document.querySelector("div.game_area_purchase_game[id]"));
-    // const packageIdStringSplitted = document
-    //   .querySelector("div.game_area_purchase_game[id]")
-    //   .getAttribute("id")
-    //   .split("_");
-    // const packageId = Number(packageIdStringSplitted[packageIdStringSplitted.length - 1]);
+    addToWishlistButton.onclick = () =>
+      (function () {
+        if (window.location.href.indexOf("unrealsales.io") !== -1) return;
+        f = "https://www.unrealsales.io/tracker/add?product=" + window.location.href;
+        location.href = f;
+      })();
 
-    // const pricesRes = await request(
-    //   `https://store.steampowered.com/api/packagedetails/?cc=us&packageids=${packageId}`,
-    //   {
-    //     method: "GET",
-    //   }
-    // );
-    // debug && console.log(pricesRes);
-    // if (!pricesRes) return null;
+    const rootEl = document.querySelector(
+      ".asset-details-container .asset-details__content"
+    );
+    rootEl.appendChild(addToWishlistButton);
 
-    // const price = getPrice(pricesRes);
-    // if (!price) return null;
-    // debug && console.log("PRICE", price);
-
-    // const reviewsCount = Number(
-    //   document.querySelector('meta[itemprop="reviewCount"]').getAttribute("content")
-    // );
-    // debug && console.log("REVIEW COUNT", reviewsCount);
-
-    // const profit = { gross: reviewsCount * 60 * price };
-    // profit.net = profit.gross * (1 - STEAM_CUT);
-    // profit.cut = profit.gross * STEAM_CUT;
-    // debug && console.log(profit);
-
-    // var formatter = new Intl.NumberFormat("en-US", {
-    //   style: "currency",
-    //   currency: "USD",
-    //   maximumFractionDigits: 0,
-    // });
-
-    // const imgContainerEl = document.querySelector("div.game_header_image_ctn");
-    // const netProfitEl = document.createElement("div");
-    // netProfitEl.style.background = "#000B";
-    // netProfitEl.style.padding = "5px 10px";
-    // netProfitEl.style.position = "absolute";
-    // netProfitEl.style.bottom = "0px";
-    // netProfitEl.style.right = "0px";
-    // netProfitEl.innerText =
-    //   "Net: " +
-    //   formatter.format(profit.net) +
-    //   " | Gross: " +
-    //   formatter.format(profit.gross) +
-    //   " | Steam Cut: " +
-    //   formatter.format(profit.cut);
-
-    // imgContainerEl.style.position = "relative";
-    // imgContainerEl.appendChild(netProfitEl);
     debug && console.log("INJECTED");
   }
 
-  if (!window.__STEAM_REVENUE_CALC_LOADED) {
-    window.__STEAM_REVENUE_CALC_LOADED = true;
-    window.addEventListener("load", onLoaded);
-  }
+  window.addEventListener("load", onLoaded);
 })();
