@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        UnrealSales add to wishlist
-// @version     6
+// @version     7
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/unrealsales-add-to-wishlist/unrealsales-add-to-wishlist.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/unrealsales-add-to-wishlist/unrealsales-add-to-wishlist.user.js
@@ -11,11 +11,11 @@
 // @require     file://F:\user-scripts\unrealsales-add-to-wishlist\unrealsales-add-to-wishlist.user.js
 // ==/UserScript==
 
-const DEBUG = true;
-const MAX_INJECT_TIME_SECONDS = 15;
-const NAME = "unreal-sales-add-to-wishlist";
-
 (function () {
+  const DEBUG = true;
+  const MAX_INJECT_TIME_SECONDS = 15;
+  const NAME = "unreal-sales-add-to-wishlist";
+
   let addButtonsTimer;
   let addButtonsTimerClearTimeout;
   let currentUrl = "";
