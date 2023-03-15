@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        UnrealSales add to wishlist
-// @version     1
+// @version     6
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/unrealsales-add-to-wishlist/unrealsales-add-to-wishlist.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/unrealsales-add-to-wishlist/unrealsales-add-to-wishlist.user.js
