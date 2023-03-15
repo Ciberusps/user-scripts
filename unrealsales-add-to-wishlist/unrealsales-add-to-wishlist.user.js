@@ -11,11 +11,22 @@
 // @require     file://F:\user-scripts\unrealsales-add-to-wishlist\unrealsales-add-to-wishlist.user.js
 // ==/UserScript==
 
-const debug = false;
+const DEBUG = true;
+const MAX_INJECT_TIME_SECONDS = 15;
+const NAME = "unreal-sales-add-to-wishlist";
 
 (function () {
-  async function onLoaded() {
-    debug && console.log("LOADED EVENT", window.location.href);
+  let addButtonsTimer;
+  let addButtonsTimerClearTimeout;
+  let currentUrl = "";
+
+  async function addButtons() {
+    const isInjected = Boolean(document.getElementById(NAME));
+    if (isInjected) {
+      clearInterval(addButtonsTimer);
+      clearTimeout(addButtonsTimerClearTimeout);
+      return DEBUG && console.log("Already injected", isInjected);
+    }
 
     const addToWishlistButton = document.createElement("div");
     addToWishlistButton.innerText = "Add to UnrealSales.io wishlist";
@@ -48,6 +59,7 @@ const debug = false;
       })();
 
     const buttonsContainer = document.createElement("div");
+    buttonsContainer.id = NAME;
     buttonsContainer.style.display = "flex";
     buttonsContainer.style.alignItems = "center";
     buttonsContainer.style.flexWrap = "wrap";
@@ -59,10 +71,45 @@ const debug = false;
     const rootEl = document.querySelector(
       ".asset-details-container .asset-details__content"
     );
+    if (!rootEl) return;
     rootEl.appendChild(buttonsContainer);
+    clearInterval(addButtonsTimer);
+    clearTimeout(addButtonsTimerClearTimeout);
 
-    debug && console.log("INJECTED");
+    DEBUG && console.log("INJECTED");
   }
 
-  window.addEventListener("load", onLoaded);
+  const runAddButtonsTimer = () => {
+    clearInterval(addButtonsTimer);
+    clearTimeout(addButtonsTimerClearTimeout);
+
+    addButtonsTimer = setInterval(() => {
+      DEBUG && console.log("try add buttons");
+      addButtons();
+    }, 500);
+
+    // insurance that interval will be stopped sometime
+    addButtonsTimerClearTimeout = setTimeout(() => {
+      clearInterval(addButtonsTimer);
+      DEBUG && console.log("addButtonsTimerClearTimeout ended");
+    }, MAX_INJECT_TIME_SECONDS * 1000);
+  };
+
+  // popstate/hashchange events dont work, check on every click for
+  window.addEventListener("click", () => {
+    // small delay to ensure that url changed
+    setTimeout(() => {
+      DEBUG && console.log("check");
+      if (currentUrl != window.location.pathname) {
+        currentUrl = window.location.pathname;
+        DEBUG && console.log("Run add buttons");
+        runAddButtonsTimer();
+      }
+    }, 100);
+  });
+
+  window.addEventListener("load", () => {
+    currentUrl = window.location.pathname;
+    runAddButtonsTimer();
+  });
 })();
