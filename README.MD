@@ -5,7 +5,7 @@ Some [userscripts](https://en.wikipedia.org/wiki/Userscript) for steam, dtf, vc,
 ## How to install
 
 - install tampermonkey for your browser - [google chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en), [other browsers](https://www.tampermonkey.net/?ext=dhdg&browser=chrome)
-- install necessary script via "Quick Install" section
+- install necessary script by clicking "install" link below
 
 ## Scripts
 
