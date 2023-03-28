@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     35
+// @version     36
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -704,7 +704,7 @@
       background: ${theme.grey} !important;
     }
 
-    // комментарии справа, фикс цвета никнеймов
+    /* комментарии справа, фикс цвета никнеймов */
     .layout__right-column a span {
       color: white;
     }
