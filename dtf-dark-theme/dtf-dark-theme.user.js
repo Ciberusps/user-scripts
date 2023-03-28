@@ -685,24 +685,33 @@
       border-top-color: ${theme.darkGrey} !important;
     }
 
-	.block-audio {
-		border: 1px solid ${theme.grey};
-	}
-	.block-audio__wrapper {
+    .block-audio {
+      border: 1px solid ${theme.grey};
+    }
+    .block-audio__wrapper {
+        background: ${theme.darkerGrey};
+    }
+    .audio_player__control__rwd, .audio_player__control__fwd, .audio_player__control__play, .audio_player__control__pause, .audio_player__control__rate, .audio_player__control__mute {
+      color: ${theme.white} !important;
+    }
+    .audio_player__control__slider__bar {
+      background-color: ${theme.blue};
+    }
+    .floating_player {
       background: ${theme.darkerGrey};
-	}
-	.audio_player__control__rwd, .audio_player__control__fwd, .audio_player__control__play, .audio_player__control__pause, .audio_player__control__rate, .audio_player__control__mute {
-	  color: ${theme.white} !important;
-	}
-	.audio_player__control__slider__bar {
-		background-color: ${theme.blue};
-	}
-	.floating_player {
-		background: ${theme.darkerGrey};
-	}
-	.audio_player__control__panel > .audio_player__control__slider {
-		background: ${theme.grey} !important;
-	}
+    }
+    .audio_player__control__panel > .audio_player__control__slider {
+      background: ${theme.grey} !important;
+    }
+
+    // комментарии справа, фикс цвета никнеймов
+    .layout__right-column a span {
+      color: white;
+    }
+    .layout__right-column a span:hover {
+      color: #3766a9;
+    }
+  
   `;
 
   const stylesheetElement = document.createElement("style");
