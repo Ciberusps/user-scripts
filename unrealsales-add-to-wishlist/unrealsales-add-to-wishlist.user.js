@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        UnrealSales add to wishlist
-// @version     8
+// @version     9
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/unrealsales-add-to-wishlist/unrealsales-add-to-wishlist.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/unrealsales-add-to-wishlist/unrealsales-add-to-wishlist.user.js
@@ -52,12 +52,19 @@
     linkToUnrealSales.style.cursor = "pointer";
     linkToUnrealSales.style.fontSize = "1.1rem";
 
-    addToWishlistButton.onclick = () =>
-      (function () {
-        if (window.location.href.indexOf("unrealsales.io") !== -1) return;
-        f = "https://www.unrealsales.io/tracker/add?product=" + window.location.href;
-        location.href = f;
-      })();
+    addToWishlistButton.onclick = () => {
+      let marketplaceLink = window.location.href;
+
+      if (window.location.href.indexOf("unrealsales.io") !== -1) return;
+      if (window.location.hostname.includes(["epicgames.com"])) {
+        marketplaceLink = `https://www.unrealengine.com${window.location.pathname.replace(
+          "/ue",
+          ""
+        )}`;
+      }
+
+      location.href = "https://www.unrealsales.io/tracker/add?product=" + marketplaceLink;
+    };
 
     const buttonsContainer = document.createElement("div");
     buttonsContainer.id = NAME;
