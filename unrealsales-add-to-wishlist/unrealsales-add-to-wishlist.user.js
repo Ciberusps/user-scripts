@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name        UnrealSales add to wishlist
-// @version     7
+// @version     8
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/unrealsales-add-to-wishlist/unrealsales-add-to-wishlist.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/unrealsales-add-to-wishlist/unrealsales-add-to-wishlist.user.js
 // @description Adds item to UnrealSales.io wishlist
 // @author      CiberusPS
 // @include     *://*.unrealengine.com/marketplace*
+// @include     *://*.epicgames.com/ue/marketplace*
 // @grant       none
 // @require     file://F:\user-scripts\unrealsales-add-to-wishlist\unrealsales-add-to-wishlist.user.js
 // ==/UserScript==
