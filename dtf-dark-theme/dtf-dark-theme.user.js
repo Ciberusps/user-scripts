@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     36
+// @version     37
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -711,7 +711,12 @@
     .layout__right-column a span:hover {
       color: #3766a9;
     }
-  
+
+    .block-code {
+      background: ${theme.blackWhiter};
+      color: white;
+      border-color: ${theme.grey};
+    }
   `;
 
   const stylesheetElement = document.createElement("style");
