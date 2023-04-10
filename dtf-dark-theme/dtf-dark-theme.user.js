@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     37
+// @version     38
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -716,6 +716,9 @@
       background: ${theme.blackWhiter};
       color: white;
       border-color: ${theme.grey};
+    }
+    .hljs-string, .hljs-number {
+      color: ${theme.blue}
     }
   `;
 
