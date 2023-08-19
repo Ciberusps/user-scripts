@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     38
+// @version     39
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -151,8 +151,8 @@
     }
 
     #v_gear, #ui_plus, #ui_sidebar_messenger {
-      filter: invert(1);
-      /* fill: ${theme.white}; */
+      // filter: invert(1);
+      fill: ${theme.white};
     }
 
     .head-notifies__panel {
@@ -719,6 +719,11 @@
     }
     .hljs-string, .hljs-number {
       color: ${theme.blue}
+    }
+    
+    .account-menu__item-wrapper.account-menu__item svg {
+      fill: white;
+      color: white;
     }
   `;
 
