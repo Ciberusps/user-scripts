@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     41
+// @version     42
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -726,8 +726,53 @@
       color: white;
     }
 
+
+
+
+    ///////////////////// NEW DTF
     .layout {
       max-width: unset;
+    }
+    .aside--left, .aside--right {
+      padding: 0px;
+    }
+    .sidebar {
+      padding: 15px 0px;
+    }
+    .live__title {
+      padding-top: 15px;
+    }
+
+    .news-widget {
+      background: ${theme.blackWhiter};
+    }
+
+    .content--short {
+      background: ${theme.blackWhiter};
+    }
+
+    .header {
+      background: ${theme.blackWhiter};
+    }
+
+    .content {
+      background: ${theme.blackWhiter};
+    }
+
+    .comments {
+      background: ${theme.blackWhiter};
+    }
+
+    .subsite__header, .subsite-header__controls, .tabs, .media__underlay:before {
+      background: ${theme.blackWhiter};
+    }
+
+    .notifications, .notifications__header {
+      background: ${theme.blackWhiter};
+    }
+
+    .settings {
+      background: ${theme.blackWhiter};
     }
   `;
 
