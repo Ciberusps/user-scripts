@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     42
+// @version     43
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -727,17 +727,18 @@
     }
 
 
+    /*  NEW DTF  */
 
-
-    ///////////////////// NEW DTF
     .layout {
       max-width: unset;
     }
+
     .aside--left, .aside--right {
       padding: 0px;
     }
     .sidebar {
       padding: 15px 0px;
+      background: red;
     }
     .live__title {
       padding-top: 15px;
