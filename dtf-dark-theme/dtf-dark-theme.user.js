@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        DTF Dark Theme
-// @version     39
+// @version     41
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/dtf-dark-theme/dtf-dark-theme.user.js
@@ -13,7 +13,7 @@
 // @include     *://*.vc.ru*
 // @include     *://vc.ru/*
 // @grant       none
-// @require     file://F:\user-scripts\dtf-dark-theme\dtf-dark-theme.user.js
+// @require     file://S:\user-scripts\dtf-dark-theme\dtf-dark-theme.user.js
 // ==/UserScript==
 
 (function () {
@@ -724,6 +724,10 @@
     .account-menu__item-wrapper.account-menu__item svg {
       fill: white;
       color: white;
+    }
+
+    .layout {
+      max-width: unset;
     }
   `;
 
