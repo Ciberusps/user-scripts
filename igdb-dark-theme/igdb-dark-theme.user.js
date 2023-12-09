@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        IGDB Dark Theme
-// @version     2
+// @version     3
 // @namespace   https://github.com/Ciberusps/user-scripts
 // @updateURL   https://github.com/Ciberusps/user-scripts/raw/main/igdb-dark-theme/igdb-dark-theme.user.js
 // @downloadURL https://github.com/Ciberusps/user-scripts/raw/main/igdb-dark-theme/igdb-dark-theme.user.js
